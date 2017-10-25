@@ -11,4 +11,5 @@ use python to get information from 4m3 and sse, and send them to your e-mail aut
 3. If you use other browsers, remember to change `webdriver.Chrome()` into `webdriver.browser()`. `webdriver.Chrome()` is in both `Get4m3Info.py` and `GetSSEInfo.py`.
 4. You need to **fill in your student card ID and username** in `Get4m3Info.py`
 5. You need to **fill in your email address, password and reciever's address**, you also need to change `smtp.163.com` to your email
+6. **make sure you are using `tongji university`'s WIFI**
 

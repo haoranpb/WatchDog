@@ -50,7 +50,3 @@ class Get4m3Info:
         driver.close()
         driver.quit()
         return message
-
-
-
-

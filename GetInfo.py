@@ -16,4 +16,4 @@ text = g4m3.get_4m3_info()
 message = message + text
 
 mail = MailSender.MailSender()
-mail.send_mail(message)  # 可以在这里直接修改“收件人”和“邮箱主体” send_mail(message, reciever, subjecet)
+mail.send_mail(message)  # 您可以在这里直接修改“收件人”和“邮箱主题” send_mail(message, reciever, subjecet)

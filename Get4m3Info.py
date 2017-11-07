@@ -13,8 +13,8 @@ import signal
 class Get4m3Info:
     def __init__(self):
         self.url = "http://4m3.tongji.edu.cn/"
-        self.username = '1652714'
-        self.passward = '014061'
+        self.username = 'xxxxxx'
+        self.passward = 'xxxxxx'
 
     def get_4m3_info(self):
         # 模拟登陆4m3

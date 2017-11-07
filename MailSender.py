@@ -12,11 +12,11 @@ from email.header import Header
 
 class MailSender:
     def __init__(self):
-        self.sender = 'asleepludan@163.com'
-        self.username = 'asleepludan@163.com'  # 发邮件邮箱
-        self.password = 'Sy19971o14'
+        self.sender = 'xxx@xxx.com'
+        self.username = 'xxx@xxx.com'  # 发邮件邮箱
+        self.password = 'xxx'
 
-    def send_mail(self, message='Hello World!', receiver='asleepludan@163.com', subject='this is an auto sending email'):
+    def send_mail(self, message='Hello World!', receiver='xxx@xxx.com', subject='this is an auto sending email'):
         print "email"
         msg = MIMEText(message, 'plain', 'utf-8')  # 中文需参数‘utf-8’，单字节字符不需要
         msg['Subject'] = Header(subject, 'utf-8')

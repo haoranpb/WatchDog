@@ -1,15 +1,21 @@
-# A Simple Python Spider
-## Overview:
-use python to get information from 4m3 and sse, and send them to your e-mail automatically
-## Attention:
-* you can't run the program before you **fill in some of your information**
-* you may need to **download some libraries and web driver** yourself
+# A Python Spider To Get Info From 4m3.tongji.edu.cn
+## OVERVIEW:
+Use python+selenium+phantomjs to get information from [4m3](4m3.tongji.edu.cn) and [sse](http://sse.tongji.edu.cn/data/list/bkstz), and send it to your e-mail automatically.
+## WARNING:
+* **You are not allowed to use this program to visit a website too frequently.**
+* **This program may not work if you are not using `TongJi university`'s WIFI, You need to download TongJi's [VPN](htttps://vpn.tongji.cn)**
 
-## Before running:
-1. Library used in this program:`selenium`, `smtplib`, `time`, `email`,you can download them in command line like: `pip install selenium`
-2. I suppose you use chrome as your browser, you need to download chrome diver, you can get [reference here](http://blog.csdn.net/cz9025/article/details/70160273). Of course you can use other browsers, but you also need to download the corresponding driver.
-3. If you use other browsers, remember to change `webdriver.Chrome()` into `webdriver.browser()`. `webdriver.Chrome()` is in both `Get4m3Info.py` and `GetSSEInfo.py`.
-4. You need to **fill in your student card ID and username** in `Get4m3Info.py`
-5. You need to **fill in your email address, password and reciever's address**, you also need to change `smtp.163.com` to your email
-6. **make sure you are using `tongji university`'s WIFI**
+
+## ATTENTION:
+* You can't run the program before you **fill in some of your information**
+* You need to **download selenium and phantomjs** yourself
+
+## BEFORE RUNNING:
+1. In file **`Get4m3Info.py`**: You need to **fill in your student card ID and username**
+2. In file **`MailSender.py`**: You need to **fill in your email address, password and reciever's address**, you also need to repalce`163` in `smtp.163.com` to your email domain name
+3. Install [selenium](http://www.seleniumhq.org/): Use `pip install selenium` in the command line to install selenium.
+4. Install phantomjs(on macOS): You can download [phantomjs here](http://phantomjs.org/), and make a copy of `/phantomjs/bin/phantomjs` to `/usr/local/bin/`.
+
+## CONTACT:
+If you get any problems when running this program, you can create an issue or send me an [e-mail](mailto:Alseepludan@163.com) to contact me.
 

@@ -12,7 +12,7 @@ Use python+selenium+phantomjs to get information from [4m3](4m3.tongji.edu.cn) a
 
 ## BEFORE RUNNING:
 1. In file **`Get4m3Info.py`**: You need to **fill in your student card ID and username**
-2. In file **`MailSender.py`**: You need to **fill in your email address, password and reciever's address**, you also need to repalce`163` in `smtp.163.com` to your email domain name
+2. In file **`MailSender.py`**: You need to **fill in your email address, password and reciever's address**, you also need to replace`163` in `smtp.163.com` to your email domain name
 3. Install [selenium](http://www.seleniumhq.org/): Use `pip install selenium` in the command line to install selenium.
 4. Install phantomjs(on macOS): You can download [phantomjs here](http://phantomjs.org/), and make a copy of `/phantomjs/bin/phantomjs` to `/usr/local/bin/`.
 

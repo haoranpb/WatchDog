@@ -1,11 +1,11 @@
 # A Python Spider To Get Info From 4m3
-## WHAT'S NEW
+## WHAT'S NEW：
 1. I rewrite this program to python3, because more and more famous progams declared to abandon python2
 2. Use `lxml` (and `requsets`) to crawl the websites that do not need to login to faster the program
-3. Add two new websites：[书伴](https://bookfere.com/) and [电影天堂](http://www.dy2018.com/).
+3. Add two new websites：[书伴](https://bookfere.com/) and [电影天堂](http://www.dy2018.com/)
 
 ## OVERVIEW:
-Use python3+selenium+phantomjs+lxml+requests to get information from [4m3](4m3.tongji.edu.cn), [SSE](http://sse.tongji.edu.cn/data/list/bkstz), [书伴](https://bookfere.com/), [电影天堂](http://www.dy2018.com/), and send it to your e-mail automatically.**If you are going to run this program, make sure you finish reading this doc. It's not long but useful.**
+Use `python3` `selenium` `phantomjs` `lxml` and `requests` to get information from [4m3](4m3.tongji.edu.cn), [SSE](http://sse.tongji.edu.cn/data/list/bkstz), [书伴](https://bookfere.com/), [电影天堂](http://www.dy2018.com/), and send it to your e-mail automatically.**If you are going to run this program, make sure you finish reading this doc. It's not long but useful**
 ## ATTENTION:
 * **You are not allowed to use this program to visit a website too frequently**
 *  You can't run the program before you **fill in some of your information**
@@ -17,10 +17,11 @@ Use python3+selenium+phantomjs+lxml+requests to get information from [4m3](4m3.t
 ## BEFORE RUNNING:
 1. In file **`Get4m3Info.py`**: You need to **fill in your student card ID and username**
 2. In file **`MailSender.py`**: You need to **fill in your email address, password and reciever's address**, you also need to replace`163` in `smtp.163.com` to your email domain name
-3. Install [selenium](http://www.seleniumhq.org/): Use `pip3 install selenium` in the command line to install selenium.So as [lxml](http://lxml.de/) and [requsets](http://docs.python-requests.org/en/master/).
-4. Install phantomjs(on macOS): You can download [phantomjs here](http://phantomjs.org/), and make a copy of `/phantomjs/bin/phantomjs` to `/usr/local/bin/`.
+3. Install [selenium](http://www.seleniumhq.org/): Use `pip3 install selenium` in the command line to install selenium.
+4. Install [lxml](http://lxml.de/) and [requsets](http://docs.python-requests.org/en/master/) in the same way above
+5. Install `phantomjs`(on macOS): You can download [phantomjs here](http://phantomjs.org/), and make a copy of `/phantomjs/bin/phantomjs` to `/usr/local/bin/`
 
-## DEPLOY
+## DEPLOY：
 This program can be deployed to VPS to send you informaiton at a certain time everyday.
 
 1. Move this program to your VPS, run the order in the command line:  

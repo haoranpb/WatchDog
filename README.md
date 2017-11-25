@@ -1,4 +1,5 @@
 # A Python Spider To Get Info From 4m3
+[中文文档](http://ludanxer.top/2017/11/25/WatchDog/)
 ## WHAT'S NEW：
 1. I rewrite this program to python3, because more and more famous progams declared to abandon python2
 2. Use `lxml` (and `requsets`) to crawl the websites that do not need to login to faster the program

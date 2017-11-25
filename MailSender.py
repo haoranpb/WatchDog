@@ -1,10 +1,7 @@
-# coding: utf-8
+# -*- coding:utf-8 -*-
 """
-Date: 2017.10.20
-Author: 孙浩然
-Description: send an E-mail(including a string) by python
+Description: Send an E-mail by python
 """
-
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
@@ -13,19 +10,19 @@ from email.header import Header
 class MailSender:
     def __init__(self):
         self.sender = 'xxx@xxx.com'
-        self.username = 'xxx@xxx.com'  # 发邮件邮箱
-        self.password = 'xxx'
+        self.username = 'xxx@xxx.com'  # fill in your username
+        self.password = 'xxx'  # fill in your password
 
-    def send_mail(self, message='Hello World!', receiver='xxx@xxx.com', subject='this is an auto sending email'):
-        print "email"
-        msg = MIMEText(message, 'plain', 'utf-8')  # 中文需参数‘utf-8’，单字节字符不需要
+    def send_mail(self, message='Hello World!', receiver='xxx@xxx.com', subject='This is an auto sending email'):
+        print("email begin")
+        msg = MIMEText(message, 'plain', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')
         msg['From'] = self.sender
         msg['To'] = receiver
 
-        smtp = smtplib.SMTP_SSL('smtp.163.com', 465, timeout=120)
+        smtp = smtplib.SMTP_SSL('smtp.163.com', 465, timeout=120)  # replace 163 to your domain name
         smtp.login(self.username, self.password)
         smtp.sendmail(self.sender, receiver, msg.as_string())
         smtp.quit()
-        print "finish"
+        print("email end")
 

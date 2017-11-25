@@ -1,25 +1,20 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 """
-Data：2017.11.7
 Author: 孙浩然
-Description: Get 4m3.tongji.edu.cn automatically and send it to your e-mail
+Date: 2017.11.25
+Description: Use python3 to get information from several website and send it as E-mail
 """
+from Get4m3Info import Get4m3Info
+from GetSSEInfo import GetSSEInfo
+from GetBookNames import GetBookName
+from GetMovieName import GetMovieName
+from MailSender import MailSender
 
-import GetSSEInfo
-import Get4m3Info
-import MailSender
-
-
-sse = GetSSEInfo.GetSSEInfo()
-g4m3 = Get4m3Info.Get4m3Info()
 
 message = ''
-text = g4m3.get_4m3_info()
-message = message + text
-# text = sse.get_sse_info() # if you want to get sse information as well
-# message = message + text  # remove both '#' in front of the line
-
-mail = MailSender.MailSender()
-mail.send_mail(message)
-
+message += Get4m3Info().get_4m3_info()
+message += GetSSEInfo().get_sse_info()
+# message += GetBookName().get_book_name()
+# message += GetMovieName().get_movie_name()
+MailSender().send_mail(message=message)

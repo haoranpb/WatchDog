@@ -3,10 +3,10 @@
 ## WHAT'S NEW：
 1. I rewrite this program to python3, because more and more famous progams declared to abandon python2
 2. Use `lxml` (and `requsets`) to crawl the websites that do not need to login to faster the program
-3. Add two new websites：[书伴](https://bookfere.com/) and [电影天堂](http://www.dy2018.com/)
+3. Add two new websites：[书伴](https://bookfere.com/)
 
 ## OVERVIEW:
-Use `python3` `selenium` `phantomjs` `lxml` and `requests` to get information from [4m3](4m3.tongji.edu.cn), [SSE](http://sse.tongji.edu.cn/data/list/bkstz), [书伴](https://bookfere.com/), [电影天堂](http://www.dy2018.com/), and send it to your e-mail automatically.**If you are going to run this program, make sure you finish reading this doc. It's not long but useful**
+Use `python3` `selenium` `phantomjs` `lxml` and `requests` to get information from [4m3](4m3.tongji.edu.cn), [SSE](http://sse.tongji.edu.cn/data/list/bkstz), [书伴](https://bookfere.com/), and send it to your e-mail automatically.**If you are going to run this program, make sure you finish reading this doc. It's not long but useful**
 ## ATTENTION:
 * **You are not allowed to use this program to visit a website too frequently**
 *  You can't run the program before you **fill in some of your information**

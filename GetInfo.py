@@ -15,6 +15,6 @@ from MailSender import MailSender
 message = ''
 message += Get4m3Info().get_4m3_info()
 message += GetSSEInfo().get_sse_info()
-# message += GetBookName().get_book_name()
-# message += GetMovieName().get_movie_name()
+message += GetBookName().get_book_name()
+#message += GetMovieName().get_movie_name()
 MailSender().send_mail(message=message)

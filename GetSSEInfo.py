@@ -1,34 +1,29 @@
-# -*- coding:utf-8 -*-
 """
-URL: http://sse.tongji.edu.cn/data/list/bkstz
-Description: get the first 6 lines information from URL above
+Author: 孙浩然
+Last modified: 2018/5/4
+Description: Get the first 6 lines information from 同济大学软件学院 -> 学院通知
 """
+
 from lxml import html
-import socket
+import time
 
-
-class GetSSEInfo:
+class getSSEInfo:
     def __init__(self):
-        self.url = 'http://sse.tongji.edu.cn/data/list/bkstz'
+        self.url = 'http://sse.tongji.edu.cn/data/list/xwdt'
 
     def get_sse_info(self):
-        socket.setdefaulttimeout(5)
-        print("SSE begin")
+        print("SSE Begin")
         try:
             response = html.parse(self.url)
-        except socket.timeout:
-            message = 'Get SSE Info time out\n'
-            return message
         except Exception:
-            message = 'Get SSE Info error\n'
+            message = 'Get SSE Info Error\n\n'
             return message
         else:
-            message = 'SSE Info:\n'
-            for i in range(1, 7):
-                xpath = '/html/body/div[3]/div/div[3]/div/ul/li[' + str(i) + ']/a/text()'
-                content = response.xpath(xpath)
-                message = message + str(content)[26:-22] + '\n'
+            time.sleep(0.5)
+            message = 'SSE Info:\n\n'
+            content = response.xpath('/html/body/div[3]/div/div[3]/div/ul/li/a/text()')[0:7]
+            for info in content:
+                message = message + str(info)[22:-22] + '\n'
             message += '\n\n\n'
-            print("SSE end")
+            print("SSE End")
             return message
-

@@ -1,20 +1,15 @@
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
+#!/usr/bin python3
 """
 Author: 孙浩然
-Date: 2017.11.25
-Description: Use python3 to get information from several website and send it as E-mail
+Last modified: 2018/5/4
+Description: Use python3 to get information from 4m3 and SSE and send it as E-mail
 """
-from Get4m3Info import Get4m3Info
-from GetSSEInfo import GetSSEInfo
-from GetBookNames import GetBookName
-from GetMovieName import GetMovieName
+from Get4m3Info import get4m3Info
+from GetSSEInfo import getSSEInfo
 from MailSender import MailSender
 
-
 message = ''
-message += Get4m3Info().get_4m3_info()
-message += GetSSEInfo().get_sse_info()
-message += GetBookName().get_book_name()
-#message += GetMovieName().get_movie_name()
-MailSender().send_mail(message=message)
+message += get4m3Info().get_4m3_info()
+message += getSSEInfo().get_sse_info()
+receivers = [''] # add your own receivers E-mail address, multiple address available
+MailSender().send_mail(message=message,receiver= receivers)

@@ -7,15 +7,15 @@ import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
 
-
 class MailSender:
+
     def __init__(self):
         self.sender = 'xxx@xxx.com'  # Fill in sender
-        self.username = 'xxx@xxx.com'  # Fill in your username
+        self.username = 'xxx@xxx.com'  # Fill in your E-mail username
         self.password = 'xxx'  # Fill in your E-mail password
-                                    # Fill in receiver and other information below
 
-    def send_mail(self, message='Information', receiver='xxx@xxx.com', subject='This is an auto sending E-mail'):
+                        # Fill in default receiver and other information below
+    def send_mail(self, message='Information', receiver='xxx@xxx.com', subject='每日校园资讯'):
         print("E-mail Begin")
         msg = MIMEText(message, 'plain', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')

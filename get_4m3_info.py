@@ -1,6 +1,6 @@
 """
 Author: 孙浩然
-Last modified: 2018/5/4
+Last modified: 2018/5/6
 Description: Use selenium + chromedriver(headless) to crawl 4m3
 Issue: 
     1. Have trouble using requests + lxml to crawl 4m3
@@ -11,11 +11,13 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-class get4m3Info:
+class Get4m3Info:
+
     def __init__(self):
         self.url = 'http://4m3.tongji.edu.cn/' # automatically redirect to login page
-        self.username = 'xxx'  # please fill in your username
+        self.username = 'xxx'  # please fill in your student ID
         self.passward = 'xxx'  # please fill in your password
+
 
     def get_4m3_info(self):
         print("4m3 Begin")

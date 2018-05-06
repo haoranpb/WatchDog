@@ -1,13 +1,13 @@
 """
 Author: 孙浩然
-Last modified: 2018/5/4
+Last modified: 2018/5/6
 Description: Get the first 6 lines information from 同济大学软件学院 -> 学院通知
 """
 
 from lxml import html
 import time
 
-class getSSEInfo:
+class GetSSEInfo:
     def __init__(self):
         self.url = 'http://sse.tongji.edu.cn/data/list/xwdt'
 
@@ -15,7 +15,7 @@ class getSSEInfo:
         print("SSE Begin")
         try:
             response = html.parse(self.url)
-        except Exception:
+        except Exception: # need to improve, maybe send error message ?
             message = 'Get SSE Info Error\n\n'
             return message
         else:

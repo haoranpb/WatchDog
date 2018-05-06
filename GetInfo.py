@@ -1,15 +1,16 @@
-#!/usr/bin python3
+#!/usr/bin/python3
 """
 Author: 孙浩然
-Last modified: 2018/5/4
+Last modified: 2018/5/6
 Description: Use python3 to get information from 4m3 and SSE and send it as E-mail
 """
-from Get4m3Info import get4m3Info
-from GetSSEInfo import getSSEInfo
-from MailSender import MailSender
+from get_4m3_info import Get4m3Info
+from get_sse_info import GetSSEInfo
+from mail_sender import MailSender
 
-message = ''
-message += get4m3Info().get_4m3_info()
-message += getSSEInfo().get_sse_info()
-receivers = [''] # add your own receivers E-mail address, multiple address available
-MailSender().send_mail(message=message,receiver= receivers)
+if __name__ == '__main__':
+    message = ''
+    message += Get4m3Info().get_4m3_info()
+    message += GetSSEInfo().get_sse_info()
+    receivers = [''] # add your own receivers E-mail address, multiple address available
+    MailSender().send_mail(message=message, receiver= receivers)

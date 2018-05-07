@@ -23,7 +23,7 @@ class GetSSEInfo:
             message = 'SSE Info:\n\n'
             content = response.xpath('/html/body/div[3]/div/div[3]/div/ul/li/a/text()')[0:7]
             for info in content:
-                message = message + str(info)[22:-22] + '\n'
+                message = message + str(info)[22:-18] + '\n'
             message += '\n\n\n'
             print("SSE End")
             return message
